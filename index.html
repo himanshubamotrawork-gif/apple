@@ -235,14 +235,19 @@ gtag('event', 'start_now_click', {
     window.location.href = "https://trkio.org/aff_c?offer_id=3320&aff_id=17763";
   }, 800);
 }
- (function () {
-      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+  (function () {
+  var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
 
-      if (!isMobile) {
-        document.getElementById("mobile-content").style.display = "none";
-        document.getElementById("desktop-message").style.display = "block";
+  if (!isMobile) {
+    var mobile = document.getElementById("mobile-content");
+    var desktop = document.getElementById("desktop-message");
+
+    if (mobile && desktop) {
+      mobile.style.display = "none";
+      desktop.style.display = "block";
   }
-  })();
+})();
+
 </script>
 
   
