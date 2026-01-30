@@ -236,20 +236,14 @@ gtag('event', 'start_now_click', {
   }, 800);
 }
   (function () {
-  var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
 
-  if (!isMobile) {
-    var mobile = document.getElementById("mobile-content");
-    var desktop = document.getElementById("desktop-message");
-
-    if (mobile && desktop) {
-      mobile.style.display = "none";
-      desktop.style.display = "block";
-  }
-})();
+      if (!isMobile) {
+        document.getElementById("mobile-content").style.display = "none";
+        document.getElementById("desktop-message").style.display = "block";
+      }
+    })();
 
 </script>
-
-  
 </body>
 </html>
